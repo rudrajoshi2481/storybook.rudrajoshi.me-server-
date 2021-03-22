@@ -13,7 +13,7 @@ var corsOptions = {
 app.use(express.json());
 app.use(cors(corsOptions));
 mongoose
-  .connect("mongodb://65.1.132.27:5000/storyBook", {
+  .connect("mongodb://rudrajoshi.me:5000/storyBook", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
@@ -45,6 +45,6 @@ app.use("/api/storyData",  require("./Routes/storyDataRoute"));
 
 app.use("/api/getStoriesList", require("./Routes/storyListRoute"));
 
-app.listen("9000", () => {
+app.listen("2000", () => {
   console.log("App started on port 9000");
 });
